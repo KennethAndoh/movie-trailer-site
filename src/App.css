@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  background-color: #090a0e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  width: 100%;
+  height: 60px;
+  background-color: #010a3f;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: sticky;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header span{
+  padding: 8px;
+  font-size: 2rem;
+}
+
+.header input{
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 360px;
+  height: 30px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 14px;
+  padding-left: 7px;
+}
+
+.header input::placeholder{
+  padding-left: 7px;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.header .search-btn{
+  width: 40px;
+  height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: white;
+  border: none;
+}
+
+.max-center{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container{
+  background: #0f1014;
+  padding: 15px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.movie-cover{
+  width: 100%;
+}
+
+.movie-placeholder{
+  min-height: 359px;
+  background: white;
+  color: #0f1014;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero{
+  min-height: 500px;
+  position: relative;
+  background-position: top center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.hero-content{
+  max-width: 70%;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1000;
+  color: white;;
+}
+
+
+.hero-title{
+  font-size: 72px;
+  margin: 0;
+}
+
+.hero-overview{
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.button{
+  background: #0f1014;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.button-close{
+  position: absolute;
+  z-index: 10;
+  bottom: 30px;
+  left: 30px;
+  
+}
+
+.youtube-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
 }
